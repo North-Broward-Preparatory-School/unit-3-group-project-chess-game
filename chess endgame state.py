@@ -8,4 +8,7 @@ mainlist = [
     [0,0,0,0,0,0,0,0],
     [0,0,0,0,0,0,0,0]
 ]
+
+mainlist[5][2] = "k"
+
 print (mainlist)
