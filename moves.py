@@ -19,9 +19,17 @@ def checkingknights (chessboard, x, y, x2, y2):
     return True
    
 def checkingbishops (chessboard, x, y, x3, y3):
-
-    
-
+    for i in range (-7,7):
+        if x+i==x3 and y+i==y3:
+            return True
+        elif x+i==x3 and y-i==y3:
+            return True
+        elif x-i==x3 and y+i==y3:
+            return True
+        elif x-i==x3 and y-i==y3:
+            return True
+        else: 
+            return False 
 def checkingrooks (chessboard, x, y, x4, y4):
     if chessboard [x4] [y4] ==0:
         if x==x4 and y+1==y4:
