@@ -1,3 +1,6 @@
+from pickle import TRUE
+
+
 def chekingpawns(chessboard, x, y, x1, y1):
     if chessboard [x1] [y1] ==0:
         if x==x1 and y+1==y1:
@@ -16,15 +19,32 @@ def chekingpawns(chessboard, x, y, x1, y1):
             return False 
 
 def checkingknights (chessboard, x, y, x2, y2):
-    return True
-   
+    if chessboard [x2] [y2] ==0:
+        if x+2==x2 and y-1==y2:
+            return True
+        elif x+2==x2 and y+1==y2:
+            return True
+        elif x-2==x2 and y+1==y2:
+            return True
+        elif x-2==x2 and y-1==y2:
+            return True
+        elif x+1==x2 and y+2==y2:
+            return True
+        elif x-1==x2 and y+2==y2:
+            return True
+        elif x+1==x2 and y-2==y2:
+            return True
+        elif x-1==x2 and y-2==y2:
+            return True 
+        else: 
+            return False
 def checkingbishops (chessboard, x, y, x3, y3):
 
     
 
 def checkingrooks (chessboard, x, y, x4, y4):
     if chessboard [x4] [y4] ==0:
-        if x==x4 and y+1==y4:
+        if x==x4 and y+1==y4:   
             return True
         elif x==x4 and y+2==y4:
             return True
