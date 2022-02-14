@@ -14,11 +14,7 @@ def chekingpawns(chessboard, x, y, x1, y1):
             return True
         else: 
             return False 
-
-def checkingknights (chessboard, x, y, x2, y2):
-    return True
-   
-def checkingbishops (chessboard, x, y, x3, y3):
+def chekingbishops(chessboard, x, y, x3, y3):        
     for i in range (-7,7):
         if x+i==x3 and y+i==y3:
             return True
@@ -31,65 +27,40 @@ def checkingbishops (chessboard, x, y, x3, y3):
         else: 
             return False 
 def checkingrooks (chessboard, x, y, x4, y4):
-    if chessboard [x4] [y4] ==0:
-        if x==x4 and y+1==y4:
-            return True
-        elif x==x4 and y+2==y4:
-            return True
-        elif x==x4 and y+3==y4:
-            return True
-        elif x==x4 and y+4==y4:
-            return True
-        elif x==x4 and y+5==y4:
-            return True
-        elif x==x4 and y+6==y4:
-            return True
-        elif x==x4 and y+7==y4:
-            return True
-        elif x==x4 and y-1==y4:
-            return True
-        elif x==x4 and y-2==y4:
-            return True
-        elif x==x4 and y-3==y4:
-            return True
-        elif x==x4 and y-4==y4:
-            return True
-        elif x==x4 and y-5==y4:
-            return True
-        elif x==x4 and y-6==y4:
-            return True
-        elif x==x4 and y-7==y4:
-            return True
-        elif x+1==x4 and y==y4:
-            return True
-        elif x+2==x4 and y==y4:
-            return True
-        elif x+3==x4 and y==y4:
-            return True
-        elif x+4==x4 and y==y4:
-            return True
-        elif x+5==x4 and y==y4:
-            return True
-        elif x+6==x4 and y==y4:
-            return True
-        elif x+7==x4 and y==y4:
-            return True
-        elif x-1==x4 and y==y4:
-            return True
-        elif x-2==x4 and y==y4:
-            return True
-        elif x-3==x4 and y==y4:
-            return True
-        elif x-4==x4 and y==y4:
-            return True
-        elif x-5==x4 and y==y4:
-            return True
-        elif x-6==x4 and y==y4:
-            return True
-        elif x-7==x4 and y==y4:
-            return True
-        else: 
-            return False 
+    for i in range (-7,7):
+        if chessboard [x4] [y4] ==0:
+            if x-i==x4 and y==y4:
+                return True 
+            elif x+i==x4 and y==y4:
+                return True
+            elif x==x4 and y-i==y4:
+                return True 
+            elif x==x4 and y+i==y4:
+                return True
+            else: 
+                return False 
+def checkingqueen (chessboard, x, y, x5, y5):
+    if chessboard [x5] [y5] ==0:
+        for i in range (-7,7):
+            if x+i==x5 and y+i==y5:
+                return True
+            elif x+i==x5 and y-i==y5:
+                return True
+            elif x-i==x5 and y+i==y5:
+                return True
+            elif x-i==x5 and y-i==y5:
+                return True
+            elif x-i==x5 and y==y5:
+                return True 
+            elif x+i==x5 and y==y5:
+                return True
+            elif x==x5 and y-i==y5:
+                return True 
+            elif x==x5 and y+i==y5:
+                return True
+            else:
+                return False
+                
         
 
 
