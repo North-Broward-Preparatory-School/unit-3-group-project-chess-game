@@ -26,7 +26,7 @@ def chekingpawns(chessboard, x, y, x1, y1):
     return False 
 
 def chekingbishops(chessboard, x, y, x3, y3):        
-    for i in range (-6,6):
+    for i in range (-7,7):
         if x+i==x3 and y+i==y3:
             return True
         elif x+i==x3 and y-i==y3:
@@ -39,7 +39,7 @@ def chekingbishops(chessboard, x, y, x3, y3):
     return False 
 
 def checkingrooks (chessboard, x, y, x4, y4):
-    for i in range (-6,6):
+    for i in range (-7,7):
         if chessboard [x4] [y4] ==0:
             if x-i==x4 and y==y4:
                 return True 
@@ -54,7 +54,7 @@ def checkingrooks (chessboard, x, y, x4, y4):
 
 def checkingqueen (chessboard, x, y, x5, y5):
     if chessboard [x5] [y5] ==0:
-        for i in range (-6,6):
+        for i in range (-7,7):
             if x+i==x5 and y+i==y5:
                 return True
             elif x+i==x5 and y-i==y5:
@@ -89,6 +89,8 @@ print (checkingrooks (chessboard, 1,1, 4,0))
 print (chekingpawns (chessboard, 1,1, 1,3))
 
 print (chekingpawns (chessboard, 1,1, 1,4))
+
+print (checkingqueen (chessboard, 3,0, 3,2))
 
 
 
