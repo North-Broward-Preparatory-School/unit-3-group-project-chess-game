@@ -8,7 +8,7 @@ chessboard = [
     ["&#9817;","&#9817;","&#9817;","&#9817;","&#9817;","&#9817;","&#9817;","&#9817;"],
     ["&#9814;","&#9816;","&#9815;","&#9813;","&#9812;","&#9815;","&#9816;","&#9814;"]
 ] 
-def chekingpawns(chessboard, x, y, x1, y1):
+def checkingpawns(chessboard, x, y, x1, y1):
     if chessboard [x1] [y1] ==0:
         if x==x1 and y+1==y1:
             return True 
@@ -25,7 +25,7 @@ def chekingpawns(chessboard, x, y, x1, y1):
 
     return False 
 
-def chekingbishops(chessboard, x, y, x3, y3):        
+def checkingbishops(chessboard, x, y, x3, y3):        
     for i in range (-7,7):
         if x+i==x3 and y+i==y3:
             return True
@@ -78,19 +78,39 @@ print (checkingqueen (chessboard, 1,1, 1,3))
 
 print (checkingqueen (chessboard, 1,1, 2,3))
 
-print (chekingbishops (chessboard, 1,1, 2,2))
+print (checkingbishops (chessboard, 1,1, 2,2))
 
-print (chekingbishops (chessboard, 1,1, 2,1))
+print (checkingbishops (chessboard, 1,1, 2,1))
 
 print (checkingrooks (chessboard, 1,1, 4,1))
 
 print (checkingrooks (chessboard, 1,1, 4,0))
 
-print (chekingpawns (chessboard, 1,1, 1,3))
+print (checkingpawns (chessboard, 1,1, 1,3))
 
-print (chekingpawns (chessboard, 1,1, 1,4))
+print (checkingpawns (chessboard, 1,1, 1,4))
 
 print (checkingqueen (chessboard, 3,0, 3,2))
+
+def checkmove (chessboard, x, y, x4, y4, piece):
+    if piece == "&#9814;":
+        checkingrooks (chessboard, x, y, x4, y4)
+    if piece == "&#9817;":
+        checkingpawns (chessboard, x, y, x4, y4)
+    if piece == "&#9823;":
+        checkingpawns (chessboard, x, y, x4, y4)
+    if piece == "&#9820;":
+        checkingrooks (chessboard, x, y, x4, y4)
+    if piece == "&#9815;":
+        checkingbishops (chessboard, x, y, x4, y4)
+    if piece == "&#9821;":
+        checkingbishops (chessboard, x, y, x4, y4)
+    if piece == "&#9813;":
+        checkingqueen (chessboard, x, y, x4, y4)
+    if piece == "&#9819;":
+        checkingqueen (chessboard, x, y, x4, y4)
+    
+    
 
 
 
