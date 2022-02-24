@@ -15,11 +15,11 @@ chessboard = [
 x=0
 y=1
 chessboard[x][y]="K"
-
 print (chessboard)
 
 def kinghitbox(chessboard,x,y):
-    if chessboard[x-1][y-1]!=0 and chessboard[x][y-`1]!=0 and chessboard[x+1][y-1]!=0 and chessboard[x-1][y]!=0 and chessboard[x][y]!=0 and chessboard[x+1][y]!=0 and chessboard[x-1][y+1]!=0 and chessboard[x][y+1]!=0 and chessboard[x+1][y+1]!=0 and chessboard :
+    #   
+    if chessboard[x-1][y-1]!=0 and chessboard[x][y-1]!=0 and chessboard[x+1][y-1]!=0 and chessboard[x-1][y]!=0 and chessboard[x][y]!=0 and chessboard[x+1][y]!=0 and chessboard[x-1][y+1]!=0 and chessboard[x][y+1]!=0 and chessboard[x+1][y+1]!=0 and chessboard :
         print(chessboard)
         return "check"
 
