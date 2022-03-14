@@ -1,12 +1,21 @@
 from hashlib import new
 from pickle import TRUE
 
+Text1 = "[5][6]"
+Text2 = "[3][4]"
+
 def converstion (Text1,Text2):
-    newt= Text1.strip('[]') 
-    newt2 = Text2.strip('[]')
-    print (newt,newt2)
-converstion (['3','4'],['4','5'])
-    
+    Text1 = Text1.replace("[","") 
+    Text1 = Text1.replace("]","")
+    Text2 = Text2.replace("[","")
+    Text2 = Text2.replace("]","")
+    text3=Text1+Text2
+    return text3
+print (converstion (Text1,Text2)[1])
+chess = (converstion (Text1,Text2))[0]
+chess1 = (converstion (Text1,Text2)[1])
+chess2 = (converstion (Text1,Text2)[2])
+chess3 = (converstion (Text1,Text2)[3])
 def chekingpawns(chessboard, x, y, x1, y1):
     if chessboard [x1] [y1] ==0:
         if x==x1 and y+1==y1:
