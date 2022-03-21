@@ -2,8 +2,8 @@ from browser import document, html
 from browser.widgets.dialog import InfoDialog
 import random
 import doc
-Text1 = "[5][6]"
-Text2 = "[3][4]"
+Text1 =  [5][6]
+Text2 =  [3][4]
 
 def converstion (Text1,Text2):
     Text1 = Text1.replace("[","") 
@@ -17,7 +17,6 @@ chess = (converstion (Text1,Text2))[0]
 chess1 = (converstion (Text1,Text2)[1])
 chess2 = (converstion (Text1,Text2)[2])
 chess3 = (converstion (Text1,Text2)[3])
-def chekingpawns(chessboard, x, y, x1, y1):
 
 chessboard = [
     ["&#9820;","&#9822;","&#9821;","&#9819;","&#9818;","&#9821;","&#9822;","&#9820;"],

@@ -1,17 +1,16 @@
 <html>
 
 <head>
+  <meta charset="UTF-8"> 
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/brython@3.9.6/brython.min.js">
+    </script>
     <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/brython@3.9.6/brython.min.js">
-</script>
-<script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/brython@3.9.6/brython_stdlib.js">
-</script>
-<meta charset="UTF-8"> 
-<title>Chessboard using Pure CSS and HTML</title>
-
-<style type="text/css">
-
+        src="https://cdn.jsdelivr.net/npm/brython@3.9.6/brython_stdlib.js">
+    </script>
+ <link href="style.css" rel="stylesheet"
+  type="text/css"/> 
+<style>
 .chessboard {
     width: 640px;
     height: 640px;
@@ -44,10 +43,9 @@
 </head>
 
 <body onload="brython()">
-    <script scr="my doc.py" type="text/python"></script>
 
-    
-
+<script src="doc.py" type="text/python"></script>    
+  
 <div class="chessboard">
 <!-- 1st -->
 <div id="[0][0]" class="white">&#9820;</div>

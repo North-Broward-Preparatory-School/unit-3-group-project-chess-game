@@ -6,15 +6,14 @@ import moves2
 
 
 
-
 #create empty list for previously stored divs
 stored = []
-vals = []:
+vals = []
 
 def valid_move(t1,t2):
   """This is a place holder for other code people are working 
   to see if a move is valid"""
-  if t1 != t2 and t1 == pval:
+  if t1 != t2 and t1 == "":
     return True
   else:
     return False
@@ -30,12 +29,11 @@ def action(event):
     print(element)
     # The text printed on the box is the element's "text" attribute
     value = element.text
-
     #gets the vaue of the target cell
     if len(stored) == 0:
       #if there is no value stored, the value is added 
       #to the list of stored values
-      if(value)!= pval:
+      if(value)!= "":
         #print(value)
         #add value and div id to the two lists
         vals.append(element.text)
@@ -44,11 +42,11 @@ def action(event):
         InfoDialog("Error", f"Nothing here to move!")
         vals = []
         stored = []
-  elif checkmove (chessboard, x, y, x7, y7, piece): 
+    elif checkmove (chessboard, x, y, x7, y7, piece):
       #if the move is valid, change the new cell to the
       #stored cell value and empty the old cell
-      element.text = vals []
-      stored[].text = pval
+      element.text = vals[0]
+      stored[0].text = ""
       #clear the lists since value no longer is stored
       vals = []
       stored = []
@@ -64,5 +62,3 @@ def action(event):
 for box in document.select("div"):
   if box.attrs['class'] == "white" or box.attrs['class']=="black":
     box.bind("click", action)
-
-  
